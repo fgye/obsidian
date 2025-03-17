@@ -134,7 +134,7 @@ git merge new-feature
 将本地分支的更改推送到远程仓库。
 
 ```bash
-git push origin main
+git push origin master
 ```
 
 ## 12. 拉取远程仓库的更改
